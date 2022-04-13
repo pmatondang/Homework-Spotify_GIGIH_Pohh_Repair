@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { searchTrack } from "../../lib/fetchApi";
 import { useSelector } from "react-redux";
+import { ButtonSearch } from '../material-ui/ui-button';
+import { InputSearchBar } from '../material-ui/ui-search-bar';
+
 const Search = ({ onSuccess }) => {
   const accessToken = useSelector((state) => state.auth.accessToken);
 
@@ -24,16 +27,15 @@ const Search = ({ onSuccess }) => {
   };
 
   return (
-    <form className="form-search" onSubmit={onSubmit}>
-      <input
-        type="text"
-        placeholder="Search here.."
-        required
+    <form onSubmit={onSubmit}>
+      <InputSearchBar
+        id="demo-helper-text-aligned-no-helper"
+        type="search"
+        label="Search gif here"
+        size="small"
         onChange={handleInput}
       />
-      <button type="submit" className="btn-search">
-        Search
-      </button>
+      <ButtonSearch variant="contained" type="submit">Search</ButtonSearch>
     </form>
   );
 };
