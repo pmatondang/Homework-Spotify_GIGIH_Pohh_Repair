@@ -1,14 +1,11 @@
 import "./index.css";
-import {
-  BrowserRouter as Router,
-  Route,
-  Redirect,
-  Switch,
-} from "react-router-dom";
-import CreatePlayList from "./page/createPlaylist";
-import Login from "./page/login";
+import { BrowserRouter as Router, Route, Redirect, Switch, } from "react-router-dom";
+import CreatePlayList from "./pages/createPlaylist";
+import Login from "./pages/login";
 import { useSelector } from "react-redux";
-import Navbar from "./Component/Navbar";
+import './css/styles.css'
+import Navbar from "./components/Navbar";
+import HomePageHeader from "./pages/Navbar/homepage-header";
 
 function App() {
   const isLogin = useSelector((state) => state.auth.isLogin);
@@ -16,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <HomePageHeader />
         <div>
           <Navbar />
           <Switch>

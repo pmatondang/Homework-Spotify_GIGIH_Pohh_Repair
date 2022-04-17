@@ -1,0 +1,10 @@
+/*HEADER CSS*/
+.header {
+    background-color: #282c34;
+}
+
+.logo {
+    width: 150px;
+    height: 60px;
+    color: #1a5276;
+}
