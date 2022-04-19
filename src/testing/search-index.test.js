@@ -8,5 +8,5 @@ test('should show searchbar', () => {
         <Provider store={store}>
             <Search />
         </Provider>);
-    expect(screen.getByTestId("searchBarForm")).toBeInTheDocument()
+    expect(screen.getByTestId("search-bar-form")).toBeInTheDocument()
 })

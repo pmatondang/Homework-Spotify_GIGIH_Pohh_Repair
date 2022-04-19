@@ -33,7 +33,7 @@ const Search: React.FC<IProps> = ({ onSuccess }) => {
   };
 
   return (
-    <form onSubmit={onSubmit} data-testid="searchBarForm">
+    <form onSubmit={onSubmit} data-testid="search-bar-form">
       <InputSearchBar
         id="demo-helper-text-aligned-no-helper"
         type="search"

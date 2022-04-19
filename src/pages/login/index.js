@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import config from "../../lib/config";
@@ -50,7 +50,7 @@ const Login = () => {
     return `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&redirect_uri=http://localhost:3000/redirect&state=${state}&scope=${config.SPOTIFY_SCOPE}`;
   };
   return (
-    <div className="auth-link" className="login-test"}>
+    <div className="auth-link" data-testid="login-test">
       <a id="link" href={generateSpotifyLinkAuthorize()}>
         Login
       </a>
