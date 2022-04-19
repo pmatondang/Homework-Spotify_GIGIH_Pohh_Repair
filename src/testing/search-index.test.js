@@ -1,0 +1,12 @@
+import { render, screen } from "@testing-library/react";
+import Search from "../components/Search/index";
+import { Provider } from 'react-redux';
+import store from '../store';
+
+test('should show searchbar', () => {
+    render(
+        <Provider store={store}>
+            <Search />
+        </Provider>);
+    expect(screen.getByTestId("searchBarForm")).toBeInTheDocument()
+})

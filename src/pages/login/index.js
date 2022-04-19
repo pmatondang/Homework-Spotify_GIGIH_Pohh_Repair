@@ -50,11 +50,11 @@ const Login = () => {
     return `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&redirect_uri=http://localhost:3000/redirect&state=${state}&scope=${config.SPOTIFY_SCOPE}`;
   };
   return (
-    <div className="auth-link">
+    <div className="auth-link" className="login-test"}>
       <a id="link" href={generateSpotifyLinkAuthorize()}>
         Login
       </a>
-    </div>
+    </div >
   );
 };
 export default Login;
